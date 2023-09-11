@@ -1,0 +1,53 @@
+.btn {
+    width: 90px;
+    box-shadow: 3px 3px rgba(0, 0, 0, .5);
+}
+
+.titulo {
+    background: linear-gradient(90deg, rgb(113, 164, 209), rgb(29, 93, 150), rgb(5, 38, 67));
+}
+
+.crea-torneo {
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+}
+
+.crea-torneo form {
+    margin: auto;
+    width: 350px;
+    margin: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.crea-torneo form textarea {
+    width: auto;
+    height: 50px;
+    width: 200px;
+}
+
+.crea-torneo form input {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.form-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 350px;
+}
+
+.form-control label {
+    margin: 0px 0px 0px 80px;
+}

@@ -1,0 +1,80 @@
+{% extends 'app/index.html' %} {% block content %} {% if request.user.is_authenticated %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Torneos</title>
+</head>
+
+<body>
+    <div class="container-fluid mx-0 px-0">
+        <div class="row mx-0 px-0">
+            <div class="row mx-0 px-0">
+                <div class="user col-12 text-center">
+                    <p>Bienvenido: {{request.user}}</p>
+                </div>
+                <div class="row s1 my-5">
+                    <div class="log col">
+                        <a class="btn btn-success" href="{% url 'crear-torneo' %}">Crear Nuevo Torneo</a>
+                    </div>
+                    <div class="col texto-buscar">
+                        <h2>Buscar Torneo</h2>
+                    </div>
+                    <div class="buscar col">
+                        <form class="buscar" method="GET">
+                            {% csrf_token %}
+                            <input type="text" name="area-buscar" value="{{valor_buscado}}" placeholder="Busca tu torneo...">
+                            <input class="btn btn-primary mx-2 my-0 px-4" type="submit" value="Buscar">
+                        </form>
+                    </div>
+                    <div class="log col"> <a class="btn btn-success" href="{% url 'logout' %}">Salir</a>{% else %}
+                        <a href="{% url 'login' %}">Ingresar</a>
+                        <hr> {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="row lista-title">
+                <h1>Lista de Torneos</h1>
+            </div>
+            <div class="row tp">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Torneos</th>
+                        <th>Deporte</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Final</th>
+                        <th>Opciones</th>
+                    </tr>
+                    {% for torneo in torneos %}
+
+                    <tr>
+                        <td>{{torneo.nombre}}</td>
+                        <td>{{torneo.deporte}}</td>
+                        <td>{{torneo.fecha_inicio}}</td>
+                        <td>{{torneo.fecha_final}}</td>
+
+                        <td class="opciones"><a class="btn btn-primary" href="{% url 'editar-torneo' torneo.id %}">Editar</a><a class="btn btn-danger" href="{% url 'eliminar-torneo' torneo.id %}">Eliminar</a></td>
+
+
+                    </tr>
+                    {% empty %}
+                    <h3>Está vacio</h3>
+
+                    {% endfor %}
+
+                </table>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+
+
+{% endblock content%}

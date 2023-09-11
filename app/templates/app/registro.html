@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b53398ea1d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'app/singup.css' %}">
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="row encabezado">
+                <div class="col-1 logo1">
+                    <img src="{% static 'app/img/logo1.png' %}">
+                </div>
+                <div class="col-1">
+                    <h1>WIN</h1>
+                </div>
+                <div class="col-10">
+                    <ul class="row ">
+                        <li class="col-2"><a href=""> Inicio</a></li>
+                        <li class="col-2"><a href="">Horarios</a></li>
+                        <li class="col-2"><a href="">Resultados</a></li>
+                        <li class="col-2"><a href="">Deportes</a></li>
+                        <li class="col-2"><a href="">Inicia sesion</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row row-registro">
+                <form class="registro" method="POST">
+                    <h2>Registro</h2>
+                    {% csrf_token %}
+                    <label>    {{form.username.label}}
+                </label> {{form.username}}
+                    <label>    {{form.password1.label}}
+                </label> {{form.password1}}
+                    <label>    {{form.password2.label}}
+                </label> {{form.password2}}
+                    <input class="btn btn-success" type="submit" value="Registrar">
+                </form>
+                <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Ingresa</a></p>
+            </div>
+        </div>
+
+</body>
+
+</html>
