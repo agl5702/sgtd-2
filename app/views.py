@@ -19,6 +19,11 @@ class Logueo(LoginView):
     def get_success_url(self):
         return reverse_lazy('torneos')
 
+def Index(request):
+    
+    return render(request, 'app/index.html')
+
+
 class PaginaRegistro(FormView):
     template_name= 'app/registro.html'
     form_class= UserCreationForm

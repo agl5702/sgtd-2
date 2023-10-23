@@ -11,6 +11,6 @@ class Torneo(models.Model):
     descripcion= models.TextField(max_length=200)
     fecha_inicio = models.DateField()
     fecha_final = models.DateField()
-    
+
     def __str__(self):
-        return f'{self.nombre} - {self.deporte} - {self.fecha_inicio} - {self.fecha_final}'
+        return self.nombre

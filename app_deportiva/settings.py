@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
+    'equipo_jugador',
+    'partidos_horarios',
+    'tabla_posiciones',
 ]
 
 MIDDLEWARE = [
