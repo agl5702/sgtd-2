@@ -1,0 +1,98 @@
+body {
+    background-image: url(/static/app/img/bg_3.jpg);
+    background-color: rgb(6, 53, 53);
+}
+
+.registro {
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: 10px;
+    width: 30%;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    margin: 30px auto;
+    box-shadow: 10px 10px rgba(0, 0, 0, .5);
+}
+
+.registro h2 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.registro input {
+    margin: 5px auto;
+    width: 60%;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid#000;
+}
+
+.registro label {
+    margin: 10px auto;
+    width: 60%;
+}
+
+.row-registro p {
+    margin: 5px 0px;
+    text-align: center;
+    color: #fff;
+}
+
+.row-registro a {
+    color: #fff;
+}
+
+.registro input[type='submit'] {
+    margin: 15px auto;
+}
+
+.logo1 img {
+    width: 90px;
+}
+
+.encabezado {
+    align-items: center;
+    box-shadow: 0px 1px rgba(255, 255, 255, 0.808);
+}
+
+.encabezado img {
+    height: 90px;
+}
+
+.encabezado ul {
+    height: 100px;
+    max-height: 100px;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado ul li {
+    margin: 20px 0px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.encabezado ul li a {
+    margin: 0px 20px;
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.encabezado ul li a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    line-height: 2.5;
+    padding-bottom: 0px;
+}
+
+.encabezado input[type="button"] {
+    margin: 20px 0px;
+}

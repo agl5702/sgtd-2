@@ -1,51 +1,66 @@
-body {}
+body {
+    background-image: url(/static/app/img/bg_3.jpg);
+    background-color: rgb(6, 53, 53);
+}
 
-.registro {
+.crea-torneo {
     background-color: rgba(255, 255, 255, 0.445);
-    border-radius: 10px;
-    width: 30%;
     display: grid;
     grid-template-columns: auto;
+    width: 30%;
+    margin: 40px auto;
     align-items: center;
-    margin: 30px auto;
+    border-radius: 10px;
     box-shadow: 10px 10px rgba(0, 0, 0, .5);
 }
 
-.registro h2 {
-    text-align: center;
-    margin: 10px auto;
+.crea-torneo form {
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
-.registro input {
+.crea-torneo p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.crea-torneo p a {
+    color: rgb(32, 39, 225);
+}
+
+.crea-torneo form input {
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 4px;
+    outline: none;
+    align-items: center;
+    margin: 5px auto;
+}
+
+.form-control {
+    width: 100%;
+    margin: 30px auto;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.form-control input {
+    align-items: center;
+    margin: auto;
+}
+
+.ingresar {
+    margin: auto;
+}
+
+.crea-torneo form label {
     margin: 5px auto;
     width: 60%;
-    border-radius: 4px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid#000;
-}
-
-.registro label {
-    margin: 10px auto;
-    width: 60%;
-}
-
-.row-registro p {
-    margin: 5px 0px;
-    text-align: center;
-    color: #fff;
-}
-
-.row-registro a {
-    color: #fff;
-}
-
-.registro input[type='submit'] {
-    margin: 15px auto;
-}
-
-.logo1 img {
-    width: 90px;
 }
 
 .encabezado {

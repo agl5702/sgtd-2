@@ -18,13 +18,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b53398ea1d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'app/singup.css' %}">
+    <link rel="stylesheet" href="{% static 'app/registrar.css' %}">
     <title>Registro</title>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div class="row">
+        <!-- <div class="row">
             <div class="row encabezado">
                 <div class="col-1 logo1">
                     <img src="{% static 'app/img/logo1.png' %}">
@@ -41,22 +41,22 @@
                         <li class="col-2"><a href="">Inicia sesion</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="row row-registro">
-                <form class="registro" method="POST">
-                    <h2>Registro</h2>
-                    {% csrf_token %}
-                    <label>    {{form.username.label}}
+            </div> -->
+        <div class="row row-registro">
+            <form class="registro" method="POST">
+                <h2>Registro</h2>
+                {% csrf_token %}
+                <label>    {{form.username.label}}
                 </label> {{form.username}}
-                    <label>    {{form.password1.label}}
+                <label>    {{form.password1.label}}
                 </label> {{form.password1}}
-                    <label>    {{form.password2.label}}
+                <label>    {{form.password2.label}}
                 </label> {{form.password2}}
-                    <input class="btn btn-success" type="submit" value="Registrar">
-                </form>
-                <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Ingresa</a></p>
-            </div>
+                <input class="btn btn-success" type="submit" value="Registrar">
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}">Ingresa</a></p>
         </div>
+    </div>
 
 </body>
 

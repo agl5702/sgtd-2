@@ -1,0 +1,46 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'app/navbar.css' %}">
+</head>
+
+<nav class="semi-transparent-table">
+    <div class="title">
+        <h1>WIN</h1>
+    </div>
+    <div class="list-nav">
+        <ul>
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#">Partidos</a>
+            </li>
+            <li>
+                <a href="#">Resultados</a>
+            </li>
+        </ul>
+    </div>
+    <div class="buscar d-flex">
+        <form class="buscar" method="GET">
+            {% csrf_token %}
+            <input class="mx-4 buscar" type="text" name="area-buscar" value="{{valor_buscado}}" placeholder="Busca tu torneo...">
+            <input class="btn btn-dark mx-2 my-0 px-2" type="submit" value="Buscar">
+        </form>
+    </div>
+    <div class="boton">
+        {% if request.user.is_authenticated %}
+        <div class="log iconos-balon mx-2">
+            <a class="btn btn-success crea-torneo i-1" href="{% url 'crear-torneo' %}"></a>
+        </div>
+        <div class="log btn-salir mx-2">
+            <a class="btn btn-danger" href="{% url 'logout' %}"></a>
+        </div>
+        {% else %}
+        <div class="log">
+            <a class="btn btn-success mx-2" href="{% url 'login' %}"></a>
+        </div>
+        {% endif %}
+    </div>
+</nav>

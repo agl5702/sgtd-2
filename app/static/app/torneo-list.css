@@ -1,0 +1,38 @@
+body {
+    background-image: url(./img/soccer-3471402_1280.jpg);
+    background-size: cover;
+    background-repeat: none;
+}
+
+.lista-title {
+    text-align: center;
+}
+
+.lista-title h1 {
+    font-style: italic;
+    font-size: 50px;
+}
+
+.opciones .btn-editar {
+    color: rgb(117, 227, 33);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.opciones .btn-eliminar {
+    color: rgb(229, 18, 18);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.bi-trophy-fill {
+    color: rgb(190, 229, 18);
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.card {
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
